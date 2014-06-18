@@ -9,9 +9,9 @@ class Converter
 		o = num % 2
 		@num = (num / 2).to_i
 		if o == 1
-			@result << "1"
+			@result = "1" + @result
 		else
-			@result << "0"
+			@result = "0" + @result
 		end	
 		
 		if @num < 1 
@@ -24,4 +24,4 @@ end
 
 c = Converter.new
 i = gets.to_i
-puts c.to_binary(i).reverse
+puts c.to_binary(i)
